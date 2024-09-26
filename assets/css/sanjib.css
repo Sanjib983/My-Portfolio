@@ -12147,6 +12147,25 @@ pre .code {
   background-position: center center;
 }
 
+.gobtn{
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px 40px;
+  background-color: #695AA6;
+  color: white;
+}
+
+.gobtn:hover{
+  background-color: #695AA9;
+}
+
+.gobtna{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .header .overlay {
   position: absolute;
   top: 0;
