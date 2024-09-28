@@ -11436,122 +11436,155 @@ p {
 }
 
 /* testmonial card */
+
 .testimonial-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
+  align-items: center;
+  animation: float 4s ease-in-out infinite; /* Add animation to testimonial cards */
 }
 
 .testimonial-card-img-holder {
-  min-width: 45px;
-  max-width: 45px;
-  z-index: 999;
+  flex-shrink: 0;
+  margin-right: 15px;
 }
 
 .testimonial-card-img {
-  background: #fff;
-  padding: 4px;
-  width: 90px;
-  height: 90px;
+  border: 3px solid #695AA6;
   border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .testimonial-card-body {
-  text-align: left;
-  border: 1px solid #dee2e6;
-  background: #fff;
-  padding: 20px 20px 20px 60px;
-  border-radius: 0;
+  flex-grow: 1;
 }
 
 .testimonial-card-title {
-  margin-top: 20px;
-  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1300 - 300)));
+  font-size: 18px;
+  color: #695AA6;
+  margin: 10px 0 5px;
 }
 
-/* blog wrapper */
-.blog-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.testimonial-card-subtitle {
+  font-size: 14px;
+  color: #333;
+}
+
+.testimonial-card-subtitle-2 {
+  font-size: 12px;
+  color: #888;
+}
+
+.row {
   display: flex;
-  text-align: left;
-  border: 1px solid #dee2e6;
-  margin-bottom: 30px;
-  border-radius: 0;
-  overflow: hidden;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.blog-card-header {
-  min-width: 350px;
-  max-width: 350px;
-}
-
-.blog-card-img {
-  border-radius: 0 0 0 0;
-  width: 100%;
+.testimonial-card {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.blog-card-body {
-  padding: 30px 20px 30px 30px;
-}
-
-.blog-card-title {
-  font-weight: 100;
-}
-
-.blog-card-caption {
-  margin: 15px 0 15px !important;
-}
-
-.blog-card-caption i {
-  display: inline-block;
-  width: 15px;
-}
-
-.blog-card-caption a {
-  margin-right: 10px;
-  color: #444;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  opacity: .7;
-  font-size: 13px;
-}
-
-.blog-card-link {
-  text-decoration: none;
-  margin-top: 20px;
-  display: block;
-  font-size: 13px;
-}
-
-.blog-card-link i {
-  position: relative;
-  top: 1px;
-}
-
-@media (max-width: 991.98px) {
-  .blog-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
   }
-  .blog-card .blog-card-header {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+
+  .testimonial-card {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Blog Style  */
+
+.blog-section {
+  text-align: center;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.blog-card {
+  background-color: #fff;
+  margin: 20px 15px 0px 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Default width */
+  transition: transform 0.3s; /* Animation effect */
+}
+
+.blog-card img {
+  margin-bottom: 20px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.blog-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.blog-card p {
+  font-size: 14px;
+  color: #555; /* Subtitle color */
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #6CB18A; /* Green color */
+  text-decoration: none;
+}
+
+.blog-card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog-card {
+      width: 90%; /* Adjust width for mobile */
+  }
+  .blog-card {
+    margin: 20px 0px 0px 0px;
+    padding: 20px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section {
+      padding: 20px; /* Reduce padding on smaller screens */
+  }
+  .blog-card h3 {
+      font-size: 16px; /* Smaller title font size */
+  }
+  .blog-card p {
+      font-size: 12px; /* Smaller description font size */
   }
 }
 
